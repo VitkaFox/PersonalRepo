@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task_4</title>
+</head>
+<body>
+    <script>
+        var unitOfLength = parseInt(prompt("Введите номер единицы измерения длины отрезка: 1 - дециметр, 2 - километр, 3 - метр, 4 - миллиметр, 5 - сантиметр"));
+        var distance = parseFloat(prompt("Введите длину отрезка"));
+        var result;
+        if (isNaN(unitOfLength) || isNaN(distance)) {
+            alert("Ошибка! Нужно вводить только числа!");
+        } else {
+            switch(unitOfLength) {
+                case 1:
+                    result = distance / 10;
+                    alert("Длина отрезка в метрах равна " + result);
+                    break;
+                case 2:
+                    result = distance * 1000;
+                    alert("Длина отрезка в метрах равна " + result);
+                    break;
+                case 3:
+                    result = distance;
+                    alert("Длина отрезка в метрах равна " + result);
+                    break;
+                case 4:
+                    result = distance / 1000;
+                    alert("Длина отрезка в метрах равна " + result);
+                    break;
+                case 5:
+                    result = distance / 100;
+                    alert("Длина отрезка в метрах равна " + result);
+                    break;
+                default:
+                    alert("Вы ввели неправильный номер единицы измерения длины отрезка")
+            }
+        }
+    </script>
+</body>
+</html>

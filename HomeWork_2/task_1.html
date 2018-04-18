@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task_1</title>
+</head>
+<body>
+    <script>
+        var x = +prompt("Введите число x");
+        var y = +prompt("Введите число y");
+        if (isNaN(x) || isNaN(y)) {
+        alert("Ошибка! Нужно вводить только числа!");
+        } else if (x > y) {
+            x += y;
+            y = x - y;
+            x = x - y;
+            alert("Наименьшее число х = " + x + "; наибольшее число y = " + y);
+        } else if (x < y) {
+            alert("Наименьшее число х = " + x + "; наибольшее число y = " + y);
+        } else {
+            alert("Числа x и y равны");            
+        }
+    </script>
+</body>
+</html>

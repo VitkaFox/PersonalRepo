@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task_5</title>
+</head>
+<body>
+    <h1>Таблица умножения</h1>
+    <script>
+        var i = 0;
+        var y = 1;
+        var rows = 10;
+        var str = "<table style='border:1px solid gray'><tbody>" + "<tr><th>Числа x/y</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th></tr>";
+        while (i < rows) {
+            str = str + "<tr>" + "<td style='font-weight:bold; width: 100px; text-align: center'>" + y + "</td>" +
+                "<td style='width: 50px; text-align: center'>" + y*1 + "</td>" +
+                "<td style='width: 50px; text-align: center'>" + y*2 + "</td>" +
+                "<td style='width: 50px; text-align: center'>" + y*3 + "</td>" +
+                "<td style='width: 50px; text-align: center'>" + y*4 + "</td>" +
+                "<td style='width: 50px; text-align: center'>" + y*5 + "</td>" +
+                "<td style='width: 50px; text-align: center'>" + y*6 + "</td>" +
+                "<td style='width: 50px; text-align: center'>" + y*7 + "</td>" +
+                "<td style='width: 50px; text-align: center'>" + y*8 + "</td>" +
+                "<td style='width: 50px; text-align: center'>" + y*9 + "</td>" +
+                "<td style='width: 50px; text-align: center'>" + y*10 + "</td>";
+            y++;
+            i++;
+        }
+        str = str + "</tbody></table>";
+        document.write(str);
+    </script>
+</body>
+</html>

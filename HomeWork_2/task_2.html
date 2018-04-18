@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task_2</title>
+</head>
+<body>
+    <script>
+        var Xa, Ya, Za, Xb, Yb, Zb, Xc, Yc, Zc;
+        Xa = parseInt(prompt("Введите координату х первой вершины:"));
+        Ya = parseInt(prompt("Введите координату y первой вершины:"));
+        Za = parseInt(prompt("Введите координату z первой вершины:"));
+        Xb = parseInt(prompt("Введите координату х второй вершины:"));
+        Yb = parseInt(prompt("Введите координату y второй вершины:"));
+        Zb = parseInt(prompt("Введите координату z второй вершины:"));
+        Xc = parseInt(prompt("Введите координату х третьей вершины:"));
+        Yc = parseInt(prompt("Введите координату y третьей вершины:"));
+        Zc = parseInt(prompt("Введите координату z третьей вершины:"));
+        if (isNaN(Xa) || isNaN(Xb) || isNaN(Xc) || isNaN(Ya) || isNaN(Yb) || isNaN(Yc) || isNaN(Za) || isNaN(Zb) || isNaN(Zc)) {
+            alert("Ошибка! Нужно вводить только числа!");
+        } else {
+            var lengthAB = Math.sqrt(Math.pow((Xa-Xb), 2) + Math.pow((Ya-Yb), 2) + Math.pow((Za-Zb), 2));
+            var lengthAC = Math.sqrt(Math.pow((Xa-Xc), 2) + Math.pow((Ya-Yc), 2) + Math.pow((Za-Zc), 2));
+            var lengthBC = Math.sqrt(Math.pow((Xb-Xc), 2) + Math.pow((Yb-Yc), 2) + Math.pow((Zb-Zc), 2));
+            if ( (Math.pow(lengthAB, 2) === Math.pow(lengthAC, 2) + Math.pow(lengthBC, 2)) ||
+            (Math.pow(lengthAC, 2) === Math.pow(lengthAB, 2) + Math.pow(lengthBC, 2)) ||
+            (Math.pow(lengthBC, 2) === Math.pow(lengthAC, 2) + Math.pow(lengthAB, 2)) ) {
+                alert("Треугольник АВС - прямоугольный");
+            } else {
+                alert("Треугольник АВС - непрямоугольный");
+            }
+        }
+    </script>
+</body>
+</html>
