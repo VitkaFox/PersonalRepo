@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task_1</title>
+</head>
+<body>
+    <script>
+        var person = {};
+        person["Имя студента:"] = prompt("Имя студента");
+        person["Фамилия студента:"] = prompt("Фамилия студента");
+        person["Возраст студента:"] = +prompt("Возраст студента");
+        person["Место обучения студента:"] = prompt("Место обучения студента");
+        var hobby = prompt("Введите интересы через запятую:");
+        person["Интересы:"] = hobby.split(",");
+        function personInfo() {
+            for (var key in person) {
+                document.writeln(key + person[key]);
+            }
+        }
+        personInfo();
+    </script>
+</body>
+</html>

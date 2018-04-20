@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task_4</title>
+</head>
+<body>
+    <script>
+        var days = parseInt(prompt('Введите количество дней'));
+        var result;
+        if (isNaN(days)) {
+            alert("Вы ввели не число!");
+        } else {
+            function formDays(days) {
+                if (days%10 === 1 && days%100 !== 11) {
+                    result = " день";
+                } else if (days%10 >= 2 && days%10 <= 4 && (days%100 !== 12 && days%100 !== 13 && days%100 !== 14)) {
+                    result = " дня";
+                } else {
+                    result = " дней";
+                }
+                return days + result;
+            }
+        }
+        alert(formDays(days));
+    </script>
+</body>
+</html>

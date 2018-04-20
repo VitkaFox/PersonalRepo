@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task_2</title>
+</head>
+<body>
+    <script>
+        var a = prompt("Введите элементы первого массива через запятую:");
+        var b = prompt("Введите элементы второго массива через запятую:");
+        var A = a.split(",");
+        var B = b.split(",");
+        var C = A.concat(B);
+        var uniqElem = function(C) {
+            var obj = {};
+            for (var i = 0; i < C.length; i++) {
+                var str = C[i];
+                obj[str] = true;
+            }
+            return Object.keys(obj);
+        }
+        alert(uniqElem(C));
+    </script>
+</body>
+</html>

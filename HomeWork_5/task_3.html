@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task_3</title>
+</head>
+<body>
+    <script>
+        var n = prompt("Введите количество чисел в последовательности Фибоначчи");
+        function fibonacci(n) {
+            var a, b, c;
+            a = 1;
+            b = 0;
+            for (var i = 0; i < n; i++) {
+                c = a + b;
+                a = b;
+                b = c;
+                document.write(b + " ");
+            }
+            return b;
+        }
+        document.write("Последнее число в последовательности Фибоначчи при n = " + n + " равно " + fibonacci(n));
+    </script>
+</body>
+</html>
