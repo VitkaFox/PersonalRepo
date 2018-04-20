@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task_1</title>
+</head>
+<body>
+    <script>
+        var person = {};
+        person.name = prompt("Имя студента");
+        person.lastName = prompt("Фамилия студента");
+        person.age = +prompt("Возраст студента");
+        person.university = prompt("Место обучения студента");
+        var interest = prompt("Введите интересы через запятую:");
+        person.hobby = interest.split(",");
+        var result;
+
+        if (isNaN(person.age)) {
+            alert("Вместо возраста Вы ввели не число!");
+        } else {
+            var formAge = function() {
+                if (person.age%10 === 1 && !(person.age === 11)) {
+                    result = " год";
+                } else if (person.age%10 >= 2 && person.age%10 <= 4 && !(person.age >= 12 && person.age <= 14)) {
+                    result = " года";
+                } else {
+                    result = " лет";
+                }
+                return person.age + " " + result + ". ";
+            }
+            function personInfo() {
+                return person.name + " " + person.lastName + ". " + formAge() + "Интересы: " + person.hobby + ". " + "Учится в " + person.university + ".";
+            }
+        }
+        console.log(personInfo());
+    </script>
+</body>
+</html>
